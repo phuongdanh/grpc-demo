@@ -11,9 +11,6 @@ ios/
 .pub/
 .pub-cache/
 .vscode/
-# Uncomment the next line to avoid checking in source code from Dart dependency packages.
-# packages/
-# Generated files by flutter
 *.flutter-plugins
 *.flutter-plugins-dependencies
 *.flutter-runner
@@ -22,10 +19,10 @@ ios/
 *.xcodeproj/
 
 # Node.js
-node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+**/node_modules/
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
 *.log
 *.swp
 *.swo
@@ -44,6 +41,26 @@ pnp.js
 *.tgz
 *.pem
 
+# Golang
+*.exe
+*.exe~
+*.test
+*.test.exe
+*.prof
+*.profdata
+*.pprof
+/vendor/
+/go/pkg/
+/go/bin/
+/go/src/golang.org/
+/go/src/google.golang.org/
+/go/src/github.com/golang/
+/go/src/github.com/google/
+/go/src/github.com/aws/
+/go/src/github.com/elastic/
+/go/src/github.com/hashicorp/
+!go.mod
+!go.sum
 
 # Other
 .DS_Store
