@@ -1,0 +1,39 @@
+syntax = "proto3";
+option go_package = ".;protos";
+package protos;
+
+message BookMessage {
+  int32 id = 1;
+  string title = 2;
+  string image = 3;
+  double price = 4;
+  int32 author_id = 5;
+  AuthorMessage author = 6;
+}
+
+message AuthorMessage {
+  int32 id = 1;
+  string name = 2;
+}
+
+message ListBookRequest {
+}
+message ListBookResponse {
+  repeated BookMessage data = 1;
+}
+
+message CreateBookRequest {
+    string title = 1;
+    string image = 2;
+    double price = 3;
+    int32 author_id = 4;
+}
+message CreateBookResponse {
+    BookMessage data = 1;
+}
+
+message DeleteBookRequest {
+  int32 id = 1;
+}
+message DeleteBookResponse {
+}

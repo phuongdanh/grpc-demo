@@ -1,0 +1,11 @@
+syntax = "proto3";
+option go_package = ".;protos";
+package protos;
+
+import "user_message.proto";
+
+service User {
+  rpc get (GetUserRequest) returns (GetUserResponse);
+  rpc update (UpdateUserRequest) returns (UpdateUserResponse);
+  rpc upload(stream UploadUserAvatarRequest) returns (UploadUserAvatarResponse); 
+}

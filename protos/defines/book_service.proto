@@ -1,0 +1,11 @@
+syntax = "proto3";
+option go_package = ".;protos";
+package protos;
+
+import "book_message.proto";
+
+service Book {
+  rpc list (ListBookRequest) returns (ListBookResponse);
+  rpc create (CreateBookRequest) returns (CreateBookResponse);
+  rpc delete (DeleteBookRequest) returns (DeleteBookResponse); 
+}

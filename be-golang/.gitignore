@@ -1,0 +1,20 @@
+# Golang
+*.exe
+*.exe~
+*.test
+*.test.exe
+*.prof
+*.profdata
+*.pprof
+/vendor/
+/go/pkg/
+/go/bin/
+/go/src/golang.org/
+/go/src/google.golang.org/
+/go/src/github.com/golang/
+/go/src/github.com/google/
+/go/src/github.com/aws/
+/go/src/github.com/elastic/
+/go/src/github.com/hashicorp/
+!go.mod
+!go.sum

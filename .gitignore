@@ -1,0 +1,54 @@
+# Flutter
+build/
+*.apk
+*.ap_
+*.ipa
+*.iml
+android/
+ios/
+.dart_tool/
+.packages
+.pub/
+.pub-cache/
+.vscode/
+# Uncomment the next line to avoid checking in source code from Dart dependency packages.
+# packages/
+# Generated files by flutter
+*.flutter-plugins
+*.flutter-plugins-dependencies
+*.flutter-runner
+*.flutter-plugins-ios
+*.last_build_id
+*.xcodeproj/
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+*.swp
+*.swo
+*.sqlite
+coverage/
+dist/
+logs/
+*.pid
+.env
+.env.local
+.env.test
+.env.development.local
+.env.production.local
+.pnp.*
+pnp.js
+*.tgz
+*.pem
+
+
+# Other
+.DS_Store
+.idea/
+.vs/
+.project
+.cproject
+*.pyc
