@@ -1,4 +1,4 @@
-.PHONY: gen-proto echo gen-node cp-proto
+.PHONY: gen-proto echo gen-node
 OUTPUT_PATH = ../output
 PHP_PLUGIN=/usr/local/bin/grpc_php_plugin
 
@@ -14,11 +14,4 @@ gen-proto:
 	--grpc_out=$(OUTPUT_PATH)/nodejs \
 	--plugin=protoc-gen-grpc=/Users/blubberbee/.nvm/versions/node/v14.18.1/bin/grpc_tools_node_protoc_plugin \
 	./$(file)*.proto ;\
-	echo "Done!";\
-
-cp-proto:
-	@echo "Copying generated code ..."; \
-	cd ../ ;\
-	cp ./protos/output/go/* ./be-golang/protos/ ;\
-	cp ./protos/output/nodejs/* ./be-nodejs/protos/ ;\
 	echo "Done!";\

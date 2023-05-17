@@ -1,0 +1,46 @@
+version: "3"
+
+networks:
+  demo-grpc:
+    driver: bridge
+
+services:
+  # be-golang:
+  #   container_name: be-golang
+  #   build:
+  #     context: .
+  #   tty: true
+  #   volumes:
+  #     - ./be-golang:/go/src
+  #   working_dir: /go/src
+  #   command: ./main
+  #   restart: on-failure
+  #   ports:
+  #     - 9090:9090
+  #   networks:
+  #     - demo-grpc
+  
+  envoy-for-golang:
+    container_name: envoy-for-golang
+    image: envoyproxy/envoy-alpine:v1.14-latest
+    volumes:
+      - ./envoy-for-golang.yaml:/etc/envoy/envoy.yaml
+    networks:
+      - demo-grpc
+    ports:
+      - "9901:9901"
+      - "50051:50051"
+
+  envoy-for-nodejs:
+    container_name: envoy-for-nodejs
+    image: envoyproxy/envoy-alpine:v1.14-latest
+    volumes:
+      - ./envoy-for-nodejs.yaml:/etc/envoy/envoy.yaml
+    networks:
+      - demo-grpc
+    ports:
+      - "9902:9901"
+      - "50052:50051"
+volumes:
+  mysql:
+    driver: local

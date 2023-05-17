@@ -84,6 +84,13 @@ func UpdateUserAvatar(userID int32, avatar string) (err error) {
 	return nil
 }
 
+func Login(email, password string) (*UserModel, error) {
+	if email == "demo@gmail.com" && password == "123456789" {
+		return GetUser(1)
+	}
+	return nil, fmt.Errorf("email and password do not match")
+}
+
 func queryData() (*ListUser, error) {
 	data, err := ioutil.ReadFile(PATH_DATA)
 	if err != nil {
