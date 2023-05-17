@@ -1,0 +1,60 @@
+body {
+  background-color: white;
+}
+.page_home {
+  width: 100%;
+  clear: both;
+  padding-top: 20px;
+  max-width: 1200px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.profile {
+  width: 25%;
+  top: 50%;
+  left: 50%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  float: left;
+}
+
+.list_book {
+  width: 75%;
+  float: left;
+  background-color: white;
+  padding: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #e9e9e9;
+}
+
+.image-cell img {
+  width: 100px;
+  object-fit: cover;
+  border-radius: 15px;
+}
