@@ -7,12 +7,12 @@ const {
   } = require('../protos/book_message_pb');
 var grpc = require('@grpc/grpc-js');
 
-const { BookList, BookInsert, BookDelete } = require('../resource/book');
+const { ListBook, CreateBook, DeleteBook } = require('../resource/book');
 
 const BookController = {
     list: async (call, callback) => {
         const response = new ListBookResponse();
-        const books = await BookList()
+        const books = await ListBook()
         books.forEach(book => {
             response.addData(marshal(book));
         });
@@ -25,7 +25,7 @@ const BookController = {
             price: call.request.getPrice(),
             author_id: call.request.getAuthorId(),
         }
-        const book = await BookInsert(input)
+        const book = await CreateBook(input)
         if (book) {
             const response = new CreateBookResponse(); 
             response.setData(marshal(book))
@@ -38,7 +38,7 @@ const BookController = {
     delete: async (call, callback) => {
         try {
             var id = call.request.getId()
-            const success = await BookDelete(id)
+            const success = await DeleteBook(id)
             if (success) {
                 callback(null, new DeleteBookResponse())
             } else {

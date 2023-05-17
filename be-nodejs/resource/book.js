@@ -1,8 +1,10 @@
 const fs = require('fs');
 
+const DATA_PATH = "/Users/blubberbee/workspace/own/demo/gRPC/database/data.json"
+
 const queryData = () => {
     return new Promise((resolve, reject) => {
-        fs.readFile('./resource/data.json', 'utf8', (err, data) => {
+        fs.readFile(DATA_PATH, 'utf8', (err, data) => {
             if (err) {
                 reject(err);
                 return;
@@ -14,7 +16,7 @@ const queryData = () => {
 
 const writeData = (data) => {
     return new Promise((resolve, reject) => {
-        fs.writeFile('./resource/data.json', JSON.stringify(data, null, 4), 'utf8', (err) => {
+        fs.writeFile(DATA_PATH, JSON.stringify(data, null, 4), 'utf8', (err) => {
             if (err) {
                 reject(false);
                 return;
@@ -24,7 +26,7 @@ const writeData = (data) => {
     });
 };
 
-const BookList = async () => {
+const ListBook = async () => {
     try {
         const jsonData = await queryData();
         const books = jsonData.books;
@@ -43,7 +45,7 @@ const BookList = async () => {
     }
 };
 
-const BookInsert = async (input) => {
+const CreateBook = async (input) => {
     try {
         const jsonData = await queryData();
         input.id = jsonData.books.length + 1;
@@ -55,7 +57,7 @@ const BookInsert = async (input) => {
     }
 }
 
-const BookDelete = async (id) => {
+const DeleteBook = async (id) => {
     try {
         const jsonData = await queryData();
         const bookIndex = jsonData.books.findIndex((book) => book.id === id);
@@ -69,4 +71,4 @@ const BookDelete = async (id) => {
     }
 }
 
-module.exports = { BookList, BookInsert, BookDelete };
+module.exports = { ListBook, CreateBook, DeleteBook };
