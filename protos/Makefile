@@ -13,5 +13,6 @@ gen-proto:
 	--js_out=import_style=commonjs:$(OUTPUT_PATH)/nodejs \
 	--grpc_out=$(OUTPUT_PATH)/nodejs \
 	--plugin=protoc-gen-grpc=/Users/blubberbee/.nvm/versions/node/v14.18.1/bin/grpc_tools_node_protoc_plugin \
+	--dart_out=grpc:$(OUTPUT_PATH)/dart \
 	./$(file)*.proto ;\
 	echo "Done!";\

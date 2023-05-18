@@ -1,57 +1,16 @@
 {
-    "books": [
-        {
-            "id": 1,
-            "title": "The Great Gatsby",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/The_Great_Gatsby_cover_1925_%281%29.jpg/800px-The_Great_Gatsby_cover_1925_%281%29.jpg",
-            "price": 12.99,
-            "author_id": 1
-        },
-        {
-            "id": 2,
-            "title": "To Kill a Mockingbird",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/4/4f/To_Kill_a_Mockingbird_%28first_edition_cover%29.jpg",
-            "price": 9.99,
-            "author_id": 2
-        },
-        {
-            "id": 3,
-            "title": "Don Quijote",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Miguel_de_Cervantes_%281605%29_El_ingenioso_hidalgo_Don_Quixote_de_la_Mancha.png/380px-Miguel_de_Cervantes_%281605%29_El_ingenioso_hidalgo_Don_Quixote_de_la_Mancha.png",
-            "price": 11.99,
-            "author_id": 3
-        }
-    ],
-    "authors": [
-        {
-            "id": 1,
-            "name": "F. Scott Fitzgerald"
-        },
-        {
-            "id": 2,
-            "name": "Harper Lee."
-        },
-        {
-            "id": 3,
-            "name": "Miguel de Cervantes Saavedra"
-        },
-        {
-            "id": 4,
-            "name": "Paulo Coelho"
-        }
-    ],
-    "users": [
-        {
-            "id": 1,
-            "name": "Từ Phương Danh",
-            "email": "demo@gmail.com",
-            "avatar": "https://kbimages1-a.akamaihd.net/b2ece927-6fe1-40fd-8ee2-681e9c3fe4c3/1200/1200/False/don-quixote-101.jpg"
-        },
-        {
-            "id": 2,
-            "name": "Others",
-            "email": "other@gmail.com",
-            "avatar": "other.jpg"
-        }
-    ]
+  "users": [
+    {
+      "ID": 1,
+      "Name": "Tucpg gg",
+      "Email": "demo@gmail.com",
+      "Avatar": "https://kbimages1-a.akamaihd.net/b2ece927-6fe1-40fd-8ee2-681e9c3fe4c3/1200/1200/False/don-quixote-101.jpg"
+    },
+    {
+      "ID": 2,
+      "Name": "",
+      "Email": "",
+      "Avatar": "other.jpg"
+    }
+  ]
 }
