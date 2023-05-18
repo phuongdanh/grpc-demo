@@ -71,7 +71,7 @@ END:
 		return fmt.Errorf("cannot write image to file: %w", err)
 	}
 	stream.SendAndClose(&protos.UploadUserAvatarResponse{
-		Url: fileName,
+		Url: "https://upload.wikimedia.org/wikipedia/en/9/9a/Trollface_non-free.png",
 	})
 	return nil
 }
